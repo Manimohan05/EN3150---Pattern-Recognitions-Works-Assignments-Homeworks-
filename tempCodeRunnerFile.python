@@ -1,0 +1,7 @@
+import tensorflow as tf
+
+# Check if TensorFlow is using cuDNN
+if tf.test.is_built_with_cuda() and tf.test.is_built_with_cudnn():
+    print("cuDNN is successfully installed and TensorFlow is using it.")
+else:
+    print("cuDNN may not be properly installed or configured with TensorFlow.")
